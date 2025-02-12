@@ -1,0 +1,45 @@
+{
+	ignore_libreadline_leaks
+    Memcheck:Leak
+	...
+    obj:*/libreadline.so.*
+}
+
+{
+	ls-mem-Leak
+	Memcheck:Leak
+	...
+	obj:/usr/bin/ls
+}
+
+{
+	cat-mem-Leak
+	Memcheck:Leak
+	...
+	obj:/usr/bin/cat
+}
+
+{
+   grep-mem-leak
+   Memcheck:Leak
+   fun:malloc
+   fun:some_function
+   obj:/usr/bin/grep
+}
+
+{
+   grep_mem_leak
+   Memcheck:Leak
+   ...
+   obj:/usr/bin/grep
+}
+
+{
+   sleep_leak
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:malloc
+   obj:/usr/lib/libc.so.*
+   fun:sleep
+   ...
+}
