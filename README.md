@@ -32,6 +32,18 @@ Il permet de mieux comprendre le fonctionnement interne des shells Unix (lecture
   - `exit`
 
 ---
+## 📂 Organisation
+
+- **includes** : définitions, includes et structures.  
+- **srcs/parsing/** : analyse des commandes, gestion des tokens et redirections.  
+- **srcs/ft_ex/ && srcs/pipex** : exécution des commandes, pipes, forks, dup2.  
+- **srcs/builtins/** : fonctions internes au shell (`cd`, `echo`, etc.).  
+- **srcs/utiles/** : librairie perso réutilisée.  
+- **srcs/add_signal/** : signaux `Ctrl-C`, `Ctrl-\`, `Ctrl-D`.  
+- **srcs/get_pwd/** :  Le shell affiche le chemin courant (`PWD`) en couleur, afin de mieux repérer dans quel dossier on se trouve.  
+- **.val.supp** : fichier de suppression utilisé par **Valgrind** pour ignorer les faux positifs de fuites mémoire liés à la lib `readline` et autres fonctions système.  
+
+---
 ## ⚙️ Compilation
 
 Pour compiler :  
