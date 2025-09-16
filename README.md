@@ -41,9 +41,10 @@ make
 ```
 
 Cela génère l’exécutable :
-
+```bash
 ./minishell
-
+```
 Pour compiler avec valgrind:
-
+```bash
 valgrind --suppressions=.val.supp --leak-check=full ./minishell
+```
